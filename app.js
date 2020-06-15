@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require("method-override");
-var favicon = require('static-favicon');
 
 var films = require('./routes/films');
 var index = require('./routes/index');
@@ -23,12 +22,11 @@ var app = express();
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'twig');
+app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
 //app.use('/css',express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(methodOverride());
