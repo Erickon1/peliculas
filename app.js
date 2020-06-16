@@ -11,11 +11,12 @@ var films = require('./routes/films');
 var index = require('./routes/index');
 
 var app = express();
-//mongoose.connect('mongodb://sysinfo:dios1234@ds055680.mlab.com:55680/alumnos', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/films',
+  { useNewUrlParser: true,
+  useUnifiedTopology: true },()=>{
+    console.log("Connected");
+  });
 
-//var mongoDB = 'mongodb://127.0.0.1:27017/mydb';
-//BD
-//mongoose.connect(mongoDB);
 //mongoose.Promise = global.Promise;
 //var db = mongoose.connection;
 //db.on('error', console.error.bind(console, 'MongoDB connection error:'));
