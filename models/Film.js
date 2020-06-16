@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var FilmSchema = new Schema({
-    id:Number,
+var FilmSchema = new Schema({    
     name: String,
     year: Number,
     gender: String,

@@ -11,7 +11,9 @@ var films = require('./routes/films');
 var index = require('./routes/index');
 
 var app = express();
-mongoose.connect('mongodb://127.0.0.1:27017/films',
+
+//mongoose.connect('mongodb://127.0.0.1:27017/films',
+mongoose.connect('mongodb+srv://erick:mongoPa55@cluster0-7g9f4.mongodb.net/films?retryWrites=true&w=majority',
   { useNewUrlParser: true,
   useUnifiedTopology: true },()=>{
     console.log("Connected");
